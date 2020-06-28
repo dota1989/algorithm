@@ -9,7 +9,19 @@ import com.zb.algorithm.SortUtil;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
+        int[] a = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
         SortUtil.printdata(data);
+        SortUtil.printdata(a);
+        sort1(data);
+        sort2(a);
+        SortUtil.printdata(data);
+        SortUtil.printdata(a);
+    }
+
+    static int[] sort1(int[] data) {
+        if (data == null || data.length < 2) {
+            return data;
+        }
 
         int size = data.length;
 
@@ -20,6 +32,22 @@ public class BubbleSort {
                 }
             }
         }
-        SortUtil.printdata(data);
+        return data;
+    }
+
+    static int[] sort2(int[] a) {
+
+        if (a == null || a.length < 2) {
+            return a;
+        }
+        for (int i = a.length - 1; i > 0; i--) {
+            for (int j = 0; j < i ; j++) {
+                if (a[j] > a[j+1]) {
+                    SortUtil.swap(a, j, j + 1);
+                }
+            }
+        }
+
+        return a;
     }
 }

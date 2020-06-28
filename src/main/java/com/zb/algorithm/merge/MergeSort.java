@@ -8,7 +8,7 @@ import com.zb.algorithm.SortUtil;
  * 在合并。
  *
  *
- * Created by zhangbin on 2019/1/25.
+ * Created by zb on 2019/1/25.
  */
 public class MergeSort {
     public static void main(String[] args) {

@@ -10,17 +10,39 @@ public class InsertSort {
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
         SortUtil.printdata(data);
+        int[] b = sort1(data);
 
-        int size = data.length;
 
+        SortUtil.printdata(b);
+    }
+
+    static int[] sort1(int[] a) {
+        int size = a.length;
         for (int i = 1; i < size; i++) {
-            int tmp = data[i];
+            int tmp = a[i];
             int j ;
-            for (j = i; j > 0 && tmp < data[j-1]; j--){
-                data[j] = data[j-1];
+            for (j = i; j > 0 && tmp < a[j-1]; j--){
+                a[j] = a[j-1];
             }
-            data[j] = tmp;
+            a[j] = tmp;
         }
-        SortUtil.printdata(data);
+        return a;
+    }
+    static int[] sort(int[] a) {
+        if (a == null || a.length < 2) {
+            return a;
+        }
+        for (int i = 1; i < a.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (a[i] < a[j]) {
+                    int tmp = a[i];
+                    for (int k = i; k > j ; k--) {
+                        a[k] = a[k-1];
+                    }
+                    a[j] = tmp;
+                }
+            }
+        }
+        return a;
     }
 }
