@@ -1,6 +1,6 @@
-package com.zb.algorithm.merge;
+package com.zb.algorithm.sort.merge;
 
-import com.zb.algorithm.SortUtil;
+import com.zb.algorithm.util.AlgorithmUtil;
 
 /**
  * 分而治之：一半一半的处理，一直分，分到最后只有一条数据肯定是有序的
@@ -14,11 +14,11 @@ public class MergeSort1 {
 
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
 
         int[] result = sort(data);
 
-        SortUtil.printdata(result);
+        AlgorithmUtil.printdata(result);
     }
 
     static int[] sort(int[] a) {

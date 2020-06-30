@@ -1,4 +1,4 @@
-package com.zb.algorithm;
+package com.zb.algorithm.sort;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

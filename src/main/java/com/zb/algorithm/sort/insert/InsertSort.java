@@ -1,6 +1,6 @@
-package com.zb.algorithm.insert;
+package com.zb.algorithm.sort.insert;
 
-import com.zb.algorithm.SortUtil;
+import com.zb.algorithm.util.AlgorithmUtil;
 
 /**
  * 插入排序：
@@ -9,11 +9,9 @@ import com.zb.algorithm.SortUtil;
 public class InsertSort {
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
         int[] b = sort1(data);
-
-
-        SortUtil.printdata(b);
+        AlgorithmUtil.printdata(b);
     }
 
     static int[] sort1(int[] a) {

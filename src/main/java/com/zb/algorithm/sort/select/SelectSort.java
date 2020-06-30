@@ -1,6 +1,6 @@
-package com.zb.algorithm.select;
+package com.zb.algorithm.sort.select;
 
-import com.zb.algorithm.SortUtil;
+import com.zb.algorithm.util.AlgorithmUtil;
 
 /**
  * 选择排序：
@@ -12,10 +12,10 @@ public class SelectSort {
 
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
         sort1(data);
 
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
     }
 
     static int[] sort1(int[] a) {
@@ -25,7 +25,7 @@ public class SelectSort {
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
                 if (a[j] < a[i]) {
-                    SortUtil.swap(a, i, j);
+                    AlgorithmUtil.swap(a, i, j);
                 }
             }
         }
@@ -47,7 +47,7 @@ public class SelectSort {
                 }
             }
             if(index != j){
-                SortUtil.swap(a, index, j);
+                AlgorithmUtil.swap(a, index, j);
             }
         }
         return a;

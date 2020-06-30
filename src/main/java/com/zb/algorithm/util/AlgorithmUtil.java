@@ -1,9 +1,9 @@
-package com.zb.algorithm;
+package com.zb.algorithm.util;
 
 /**
  * Created by zb on 2019/1/24.
  */
-public class SortUtil {
+public class AlgorithmUtil {
     public static void printdata(int[] data) {
         for (int k : data) {
             System.out.print(k);

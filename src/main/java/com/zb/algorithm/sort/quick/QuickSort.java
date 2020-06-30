@@ -1,6 +1,6 @@
-package com.zb.algorithm.quick;
+package com.zb.algorithm.sort.quick;
 
-import com.zb.algorithm.SortUtil;
+import com.zb.algorithm.util.AlgorithmUtil;
 
 /**
  * 快速排序：
@@ -15,11 +15,11 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] data = {10, 20, 30, 5, 2, 4, 8, 22, 25, 11};
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
 
         quickSort(data, 0, data.length - 1);
 
-        SortUtil.printdata(data);
+        AlgorithmUtil.printdata(data);
     }
 
     public static void quickSort(int[] a, int left, int right){
