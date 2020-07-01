@@ -39,10 +39,9 @@ public class Solution1227 {
     public double nthPersonGetsNthSeat(int n) {
 
         double result = 0;
-        for (int i = 0; i < n; i++) {
-            result = result + 1 / (n - i);
-         }
+
         return result;
+
 
         // 1/3
         // 1/3 * 1/2
